@@ -1,6 +1,6 @@
 import { StyleSheet, View, Text, TextInput } from 'react-native';
 
-export const Textbox = ({ title, placeholder }) => {
+export const Textbox = ({ title, placeholder, value, onChangeText }) => { 
   return (
     <View style={styles.inputContainer}>
       <Text style={styles.inputTitle}>{title}</Text>
@@ -9,6 +9,8 @@ export const Textbox = ({ title, placeholder }) => {
         placeholder={placeholder}
         multiline={title === "Description"}
         numberOfLines={title === "Description" ? 3 : 1}
+        value={value} 
+        onChangeText={onChangeText} 
       />
     </View>
   );
